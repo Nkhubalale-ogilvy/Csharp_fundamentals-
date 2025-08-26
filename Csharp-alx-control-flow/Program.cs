@@ -1,8 +1,7 @@
-﻿class ControlFlow
+﻿﻿class ControlFlow
 {
     static void Main()
     {
         Reminder.Remind();
     }
 }
-
