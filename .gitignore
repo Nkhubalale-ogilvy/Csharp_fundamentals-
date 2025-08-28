@@ -427,5 +427,3 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
-
-Csharp-alx-control-flow/.vscode/*
