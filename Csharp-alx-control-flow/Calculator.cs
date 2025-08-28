@@ -4,7 +4,7 @@ public class Calculator
     { 
         int num1, num2;
         string result;
-        string? arithmeticOperator;
+        
 
         Console.WriteLine("Enter the first number: ");
         num1 = Convert.ToInt32(Console.ReadLine());
@@ -13,9 +13,8 @@ public class Calculator
         num2 = Convert.ToInt32(Console.ReadLine()); 
 
         Console.WriteLine("Choose the operation (+, -, *, /): ");
-        arithmeticOperator = Console.ReadLine();
+        string? arithmeticOperator = Console.ReadLine();
 
-        double numericResult;
 
 
         switch (arithmeticOperator)
@@ -48,10 +47,10 @@ public class Calculator
                 result = "Error! Invalid operation.";
                 break;
 
-        }   
+        }
 
 
-        if (double.TryParse(result, out numericResult))
+        if (double.TryParse(result, out double numericResult))
         {
             Console.WriteLine($"The result is {numericResult}");
         }
