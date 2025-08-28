@@ -1,67 +1,57 @@
 public class Calculator
 {
     public static void Calculate()
-    { 
+    {
         int num1, num2;
-        string result;
-        
 
         Console.WriteLine("Enter the first number: ");
-        num1 = Convert.ToInt32(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out num1))
+        {
+            Console.WriteLine("Invalid input. Please enter a valid integer: ");
+        }
 
         Console.WriteLine("Enter the second number: ");
-        num2 = Convert.ToInt32(Console.ReadLine()); 
+        while (!int.TryParse(Console.ReadLine(), out num2))
+        {
+            Console.WriteLine("Invalid input. Please enter a valid integer: ");
+        }
 
         Console.WriteLine("Choose the operation (+, -, *, /): ");
         string? arithmeticOperator = Console.ReadLine();
 
-
+        double? result = null;
+        string? errorMessage = null;
 
         switch (arithmeticOperator)
         {
             case "+":
-                result = (num1 + num2).ToString();
+                result = num1 + num2;
                 break;
 
             case "-":
-                result = (num1 - num2).ToString();
+                result = num1 - num2;
                 break;
 
             case "*":
-                result = (num1 * num2).ToString();
+                result = num1 * num2;
                 break;
 
             case "/":
                 if (num2 != 0)
-                {
-                    result = (num1 / (double)num2).ToString();
-                }
+                    result = (double)num1 / num2;
                 else
-                {
-                    result = "Error! Division by zero is not allowed.";
-                }
+                    errorMessage = "Error! Division by zero is not allowed.";
                 break;
 
             default:
-
-                result = "Error! Invalid operation.";
+                errorMessage = "Error! Invalid operation.";
                 break;
-
         }
 
+        if (errorMessage != null)
+            Console.WriteLine(errorMessage);
 
-        if (double.TryParse(result, out double numericResult))
-        {
-            Console.WriteLine($"The result is {numericResult}");
-        }
         else
-        {
-            Console.WriteLine(result);
-        }
-
-
-
-
+            Console.WriteLine($"The result is {result}");
     }
-}   
-
+}
