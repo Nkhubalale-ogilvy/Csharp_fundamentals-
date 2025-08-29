@@ -6,7 +6,8 @@
         Console.WriteLine("1. Reminder");
         Console.WriteLine("2. Calculator");
         Console.WriteLine("3. Multiplication Table");
-        Console.Write("Enter your choice (1, 2 or 3): ");
+        Console.WriteLine("4. Pattern Drawing");
+        Console.Write("Enter your choice (1, 2 , 3, or 4): ");
 
         string? choice = Console.ReadLine();
 
@@ -22,6 +23,10 @@
 
             case "3":
                 MultuplicationTable.Multiplication();
+                break;
+                
+            case "4":
+                PatternDrawing.DrawPattern();
                 break;
                 
             default:
