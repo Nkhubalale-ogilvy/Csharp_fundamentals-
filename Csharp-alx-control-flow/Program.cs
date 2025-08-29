@@ -5,7 +5,8 @@
         Console.WriteLine("Choose a program to run:");
         Console.WriteLine("1. Reminder");
         Console.WriteLine("2. Calculator");
-        Console.Write("Enter your choice (1 or 2): ");
+        Console.WriteLine("3. Multiplication Table");
+        Console.Write("Enter your choice (1, 2 or 3): ");
 
         string? choice = Console.ReadLine();
 
@@ -19,6 +20,10 @@
                 Calculator.Calculate();
                 break;
 
+            case "3":
+                MultuplicationTable.Multiplication();
+                break;
+                
             default:
                 Console.WriteLine("Invalid choice. Exiting program.");
                 break;
