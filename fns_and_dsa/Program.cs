@@ -7,6 +7,7 @@
         Console.WriteLine("1. Arithmetic Operations");
         Console.WriteLine("2. Temperature Conversion");
         Console.WriteLine("3. Shopping List Manager");
+        Console.WriteLine("4. Explore Date and Time");
 
         string? choice = Console.ReadLine();
 
@@ -53,7 +54,9 @@
                 Shopping.DoShopping();
                 break;
 
-
+            case "4":
+                ExploreDatetime.ExploreDateTime();  
+                break;
 
 
             default:
