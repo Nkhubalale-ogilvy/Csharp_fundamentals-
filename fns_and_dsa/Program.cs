@@ -6,6 +6,7 @@
         Console.WriteLine("Choose an option:");
         Console.WriteLine("1. Arithmetic Operations");
         Console.WriteLine("2. Temperature Conversion");
+        Console.WriteLine("3. Shopping List Manager");
 
         string? choice = Console.ReadLine();
 
@@ -48,6 +49,9 @@
 
                 break;
 
+            case "3":
+                Shopping.DoShopping();
+                break;
 
 
 
