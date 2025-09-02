@@ -5,16 +5,16 @@ public class Book(string title, string author)
     private readonly string _title = title;
     private readonly string _author = author;
 
-    private bool IsCheckOut = false;
+    private bool _isCheckedOut = false;
 
     public string Title => _title;
     public string Author => _author;
 
     public bool CheckOut()
     {
-        if (!IsCheckOut)
+        if (!_isCheckedOut)
         {
-            IsCheckOut = true;
+            _isCheckedOut = true;
             return true;
         }
         else
@@ -25,9 +25,9 @@ public class Book(string title, string author)
 
     public bool ReturnBook()
     {
-        if (IsCheckOut)
+        if (_isCheckedOut)
         {
-            IsCheckOut = false;
+            _isCheckedOut = false;
             return true;
         }
         else
@@ -38,7 +38,7 @@ public class Book(string title, string author)
 
     public bool IsAvailable()
     {
-        return !IsCheckOut;
+        return !_isCheckedOut;
     }
 
 }
