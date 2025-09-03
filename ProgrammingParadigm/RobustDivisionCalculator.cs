@@ -25,24 +25,21 @@ public static class RobustDivisionCalculator
             return "Error: The number is too large or too small.";
         }
     }
-    
-    public static int RunProgram(string[] Arguments)
+
+    public static void RunProgram()
     {
-        if (Arguments.Length != 2)
-        {
-           Console.WriteLine("Error: Please provide exactly two numbers.");
-           Console.WriteLine("Example: dotnet run 10 2");
-           Console.WriteLine("This will divide 10 by 2.");
-           return 1;
-        }
+        Console.WriteLine(" Robust Division Calculator");
 
-        string numerator = Arguments[0];
-        string denominator = Arguments[1];
+        Console.Write("Enter numerator: ");
+        string? numerator = Console.ReadLine();
 
-        string result = SafeDivide(numerator, denominator);
+        Console.Write("Enter denominator: ");
+        string? denominator = Console.ReadLine();
+
+        string result = SafeDivide(numerator ?? "", denominator ?? "");
         Console.WriteLine(result);
 
-        return 0;
+    
         
     }
 }
