@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace ProgrammingParadigm
+{
+ class Program
+ {
+     static int Main(string[] Args)
+     {
+            return RobustDivisionCalculator.RunProgram(Args);
+         
+     }
+ }
+}

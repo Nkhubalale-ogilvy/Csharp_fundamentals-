@@ -1,4 +1,5 @@
 namespace ProgrammingParadigm;
+
 public static class RobustDivisionCalculator
 {
     public static string SafeDivide(string numerator, string denominator)
@@ -23,5 +24,25 @@ public static class RobustDivisionCalculator
         {
             return "Error: The number is too large or too small.";
         }
+    }
+    
+    public static int RunProgram(string[] Arguments)
+    {
+        if (Arguments.Length != 2)
+        {
+           Console.WriteLine("Error: Please provide exactly two numbers.");
+           Console.WriteLine("Example: dotnet run 10 2");
+           Console.WriteLine("This will divide 10 by 2.");
+           return 1;
+        }
+
+        string numerator = Arguments[0];
+        string denominator = Arguments[1];
+
+        string result = SafeDivide(numerator, denominator);
+        Console.WriteLine(result);
+
+        return 0;
+        
     }
 }
