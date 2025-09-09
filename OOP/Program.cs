@@ -3,5 +3,7 @@
     static void Main()
     {
         PolymorphismDemo.RunDemo();
+
+        RunBook.Run();
     }     
 }
