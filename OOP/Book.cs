@@ -29,7 +29,7 @@ public class RunBook
 {
     public static void Run()
     {
-        Book book = new("1984", "George Orwell", 1949);
+        Book? book = new("1984", "George Orwell", 1949);
         Console.WriteLine(book.ToString());
         Console.WriteLine(book);
 
