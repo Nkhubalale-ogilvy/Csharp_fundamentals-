@@ -5,5 +5,7 @@
         PolymorphismDemo.RunDemo();
 
         RunBook.Run();
+
+        ClassStaticMethodsDemo.Run();
     }     
 }
